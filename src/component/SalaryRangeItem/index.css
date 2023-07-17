@@ -1,0 +1,14 @@
+.salary-list {
+  list-style-type: none;
+}
+
+.radio {
+  width: 15px;
+  height: 15px;
+  font-family: 'Roboto';
+}
+
+.label {
+  color: white;
+  font-size: 15px;
+}

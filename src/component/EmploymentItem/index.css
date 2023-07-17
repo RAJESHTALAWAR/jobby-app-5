@@ -1,0 +1,15 @@
+.checkbox {
+  height: 15px;
+  width: 15px;
+  border-width: 0px;
+}
+.types-employ-list-container {
+  list-style-type: none;
+  align-items: center;
+}
+label {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: roboto;
+}

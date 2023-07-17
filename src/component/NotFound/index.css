@@ -1,0 +1,17 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+.not-found-heading {
+  color: white;
+  font-size: 30px;
+  font-family: roboto;
+  font-weight: 500;
+}
+.not-found-para {
+  color: white;
+  font-size: 15px;
+  font-family: roboto;
+}

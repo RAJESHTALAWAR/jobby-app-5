@@ -1,0 +1,90 @@
+.specific-job-container {
+  background-color: #2c364c;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+}
+.company-logo {
+  height: 80px;
+  width: 80px;
+}
+.job-top-container {
+  display: flex;
+}
+.company-title {
+  color: white;
+  font-size: 25px;
+  margin-left: 20px;
+  font-family: roboto;
+}
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+.titled-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-middle-container {
+  display: flex;
+  justify-content: space-between;
+}
+.horizontal-line {
+  width: 100%;
+}
+.description-heading {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: roboto;
+}
+.description-para {
+  color: white;
+  font-size: 15px;
+  font-family: roboto;
+}
+.unordered-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.skills-heading {
+  color: white;
+  font-size: 20px;
+  font-family: roboto;
+}
+
+.life-at-company-container {
+  display: flex;
+}
+.description-life {
+  color: white;
+  font-size: 15px;
+  font-family: roboto;
+  margin: 10px;
+}
+.similar-heading {
+  color: white;
+  margin-left: 30px;
+  font-size: 25px;
+  font-family: roboto;
+}
+.unordered-similar-container {
+  display: flex;
+}
+.location-name {
+  color: white;
+  font-size: 20px;
+  font-family: roboto;
+}
+.description-link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  font-size: 18px;
+}

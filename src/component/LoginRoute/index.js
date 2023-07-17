@@ -1,4 +1,5 @@
 import {Component} from 'react'
+
 import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
@@ -22,8 +23,9 @@ class LoginRoute extends Component {
 
   successSubmit = jwtToken => {
     const {history} = this.props
-    Cookies.set('jwt_token', jwtToken, {expire: 30})
     history.replace('/')
+    console.log(history)
+    Cookies.set('jwt_token', jwtToken, {expire: 30})
   }
 
   failureSubmit = error => {
@@ -40,16 +42,21 @@ class LoginRoute extends Component {
       body: JSON.stringify(userDetails),
     }
     const response = await fetch(url, options)
+
     const data = await response.json()
-    if (response.true) {
+    if (response.ok === true) {
+      console.log(data)
+      console.log(response)
       this.successSubmit(data.jwt_token)
+      this.setState({username: '', password: ''})
     } else {
       this.failureSubmit(data.error_msg)
+      this.setState({username: '', password: ''})
     }
   }
 
   render() {
-    const {showMessage, error} = this.state
+    const {showMessage, error, password, username} = this.state
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
@@ -73,17 +80,23 @@ class LoginRoute extends Component {
                 id="username"
                 placeholder="USERNAME"
                 onChange={this.onChangeUsername}
+                type="text"
+                value={username}
+                autoComplete="username"
               />
             </div>
             <div className="label">
-              <label htmlFor="password" className="username">
+              <label htmlFor="current-password" className="username">
                 PASSWORD
               </label>
               <input
                 className="input"
-                id="username"
+                id="current-password"
                 placeholder="PASSWORD"
                 type="password"
+                onChange={this.onChangePassword}
+                value={password}
+                autoComplete="current-password"
               />
             </div>
             <button className="button" type="submit">
